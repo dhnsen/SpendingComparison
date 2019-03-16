@@ -1,0 +1,58 @@
+﻿@model SpendingComparisonV0_1.Models.SpendingModels.StandardSpending
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Standard Spending Model</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CalendarYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CalendarYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RestaurantsAndDining)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RestaurantsAndDining)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Groceries)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Groceries)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentOrMortgage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentOrMortgage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ElectricAndGas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElectricAndGas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StandardSpendingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
