@@ -9,7 +9,7 @@ namespace SpendingComparison.Models
     public class StandardSpending
     {
         [Key]
-        public int StandardSpendingID { get; set; }
+        public int StandardSpendingId { get; set; }
         [Required]
         [Display(Name = "Calendar Year")]
         public int CalendarYear { get; set; }

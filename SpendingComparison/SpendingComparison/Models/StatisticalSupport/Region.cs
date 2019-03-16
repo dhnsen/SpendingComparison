@@ -10,7 +10,7 @@ namespace SpendingComparison.Models.StatisticalSupport
     {
         [Key]
         [Display(Name = "Region")]
-        public int RegionID { get; set; }
+        public int RegionId { get; set; }
         [Required]
         [Display(Name = "Name of Region")]
         public string Name { get; set; }

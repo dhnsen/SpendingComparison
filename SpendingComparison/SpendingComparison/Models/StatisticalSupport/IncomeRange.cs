@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SpendingComparison.Models.Multipliers
+namespace SpendingComparison.Models.StatisticalSupport
 {
     public class IncomeRange
     {
         [Key]
         [Display(Name = "Income Range")]
-        public int IncomeRangeID { get; set; }
+        public int IncomeRangeId { get; set; }
         [Required]
         [Display(Name = "Bottom Income Range")]
         public decimal BottomIncomeRange { get; set; }

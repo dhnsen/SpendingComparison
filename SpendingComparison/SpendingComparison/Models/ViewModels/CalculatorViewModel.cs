@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpendingComparison.Models.StatisticalSupport;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,13 +12,13 @@ namespace SpendingComparison.Models.ViewModels
         [Required]
         [Display(Name = "Income Range")]
         public int IncomeRangeId { get; set; }
-        //[Display(Name = "Income Range")]
-        //public virtual IncomeRange IncomeRange { get; set; }
-        //[Required]
-        //[Display(Name = "Region")]
-        //public int RegionId { get; set; }
-        //[Display(Name = "Region")]
-        //public virtual Region Region { get; set; }
+        [Display(Name = "Income Range")]
+        public virtual IncomeRange IncomeRange { get; set; }
+        [Required]
+        [Display(Name = "Region")]
+        public int RegionId { get; set; }
+        [Display(Name = "Region")]
+        public virtual Region Region { get; set; }
 
 
         [Required]

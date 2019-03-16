@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace SpendingComparison.Models.Multipliers
+namespace SpendingComparison.Models.StatisticalSupport
 {
     public class IncomeMultiplier
     {
         [Key]
-        public int MultiplierIncomeID { get; set; }
+        public int MultiplierIncomeId { get; set; }
 
         [Required]
         [Display(Name = "Income Range")]
