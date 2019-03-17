@@ -9,20 +9,59 @@ namespace SpendingComparison.Models.ViewModels
     public class CalculatorResultViewModel
     {
         // The spending categories from the user
-        [Display(Name = "Restaurants and Dining")]
-        public decimal RestaurantsAndDining { get; set; }
         [Display(Name = "Groceries")]
-        public decimal Groceries { get; set; }
+        public double Groceries { get; set; }
+
+        [Display(Name = "Restaurants and Dining")]
+        public double RestaurantsAndDining { get; set; }
+
         [Display(Name = "Rent or Mortgage")]
-        public decimal RentOrMortgage { get; set; }
-        [Display(Name = "Electric and Gas (heating)")]
-        public decimal ElectricAndGas { get; set; }
+        public double RentOrMortgage { get; set; }
+
+        [Display(Name = "Utilities")]
+        public double Utilities { get; set; }
+
+        [Display(Name = "Phone Service")]
+        public double Telephone { get; set; }
+
+        [Display(Name = "Household Supplies")]
+        public double Household { get; set; }
+
+        [Display(Name = "Furniture and Appliances")]
+        public double HouseholdEquipment { get; set; }
+
+        [Display(Name = "Clothing")]
+        public double Clothing { get; set; }
+
+        [Display(Name = "Vehicles")]
+        public double Vehicles { get; set; }
+
+        [Display(Name = "Gasoline")]
+        public double Gasoline { get; set; }
+
+        [Display(Name = "Health Care")]
+        public double HealthCare { get; set; }
+
+        [Display(Name = "Entertainment")]
+        public double Entertainment { get; set; }
+
+        [Display(Name = "Education")]
+        public double Education { get; set; }
 
         // The numbers from the comparison spending model
-        public decimal ComparisonRestaurantsAndDining { get; set; }
-        public decimal ComparisonGroceries { get; set; }
-        public decimal ComparisonRentOrMortgage { get; set; }
-        public decimal ComparisonElectricAndGas { get; set; }
+        public double ComparisonGroceries { get; set; }
+        public double ComparisonRestaurantsAndDining { get; set; }
+        public double ComparisonRentOrMortgage { get; set; }
+        public double ComparisonUtilities { get; set; }
+        public double ComparisonTelephone { get; set; }
+        public double ComparisonHousehold { get; set; }
+        public double ComparisonHouseholdEquipment { get; set; }
+        public double ComparisonClothing { get; set; }
+        public double ComparisonVehicles { get; set; }
+        public double ComparisonGasoline { get; set; }
+        public double ComparisonHealthCare { get; set; }
+        public double ComparisonEntertainment { get; set; }
+        public double ComparisonEducation { get; set; }
 
         // The results of the comparison
         public bool RestaurantsAndDiningGood { get; set; }
