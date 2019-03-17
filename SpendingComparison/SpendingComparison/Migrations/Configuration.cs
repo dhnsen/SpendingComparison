@@ -47,18 +47,23 @@ namespace SpendingComparison.Migrations
                 );
 
             _context.IncomeMultipliers.AddOrUpdate(i => i.IncomeMultiplierId,
-                new IncomeMultiplier() { IncomeMultiplierId = 1},
-                new IncomeMultiplier() { IncomeMultiplierId = 1 },
-                new IncomeMultiplier() { IncomeMultiplierId = 1 },
-                new IncomeMultiplier() { IncomeMultiplierId = 1 },
-                new IncomeMultiplier() { IncomeMultiplierId = 1 },
-                new IncomeMultiplier() { IncomeMultiplierId = 1 },
-                new IncomeMultiplier() { IncomeMultiplierId = 1 },
-                new IncomeMultiplier() { IncomeMultiplierId = 1 },
-                new IncomeMultiplier() { IncomeMultiplierId = 1 }
+                new IncomeMultiplier() { IncomeMultiplierId = 1, IncomeRangeId = 1, Groceries = .57, RestaurantsAndDining = .44, RentOrMortgage = .5, Utilities = .61, Telephone = .48, Household = .32, HouseholdEquipment = .4, Clothing = .48, Vehicles = .33, Gasoline = .44, HealthCare = .45, Entertainment = .39, Education = .6},
+                new IncomeMultiplier() { IncomeMultiplierId = 2, IncomeRangeId = 2, Groceries =  .71, RestaurantsAndDining = .50, RentOrMortgage =.64, Utilities = .8, Telephone = .65, Household = .53, HouseholdEquipment = .5, Clothing = .55, Vehicles = .50, Gasoline = .62, HealthCare = .68, Entertainment = .49, Education = .34},
+                new IncomeMultiplier() { IncomeMultiplierId = 3, IncomeRangeId = 3, Groceries =  .87, RestaurantsAndDining = .62, RentOrMortgage = .71, Utilities = .91, Telephone = .88, Household = .63, HouseholdEquipment = .57, Clothing = .72, Vehicles = .78, Gasoline = .84, HealthCare = .86, Entertainment = .61, Education = .26},
+                new IncomeMultiplier() { IncomeMultiplierId = 4, IncomeRangeId = 4, Groceries =  .88, RestaurantsAndDining = .82, RentOrMortgage = .8, Utilities = .95, Telephone = .92, Household = .71, HouseholdEquipment = .76, Clothing = .74, Vehicles = .77, Gasoline = .92, HealthCare = .92, Entertainment = .67, Education = .33},
+                new IncomeMultiplier() { IncomeMultiplierId = 5, IncomeRangeId = 5, Groceries =  .95, RestaurantsAndDining = .98, RentOrMortgage = .91, Utilities = .99, Telephone = 1.02, Household = .82, HouseholdEquipment = .94, Clothing = .78, Vehicles = 1.04, Gasoline = 1.04, HealthCare = .96, Entertainment = .86, Education =.48 },
+                new IncomeMultiplier() { IncomeMultiplierId = 6, IncomeRangeId = 6, Groceries =  1.08, RestaurantsAndDining = 1.09, RentOrMortgage = 1.09, Utilities = 1.09, Telephone = 1.21, Household = 1.01, HouseholdEquipment = 1.19, Clothing = 1.08, Vehicles = 1.1, Gasoline = 1.26, HealthCare = 1.14, Entertainment = 1.08, Education = .75},
+                new IncomeMultiplier() { IncomeMultiplierId = 7, IncomeRangeId = 7, Groceries =  1.38, RestaurantsAndDining = 1.46, RentOrMortgage = 1.32, Utilities = 1.23, Telephone = 1.37, Household = 1.46, HouseholdEquipment = 1.51, Clothing = 1.51, Vehicles = 1.49, Gasoline = 1.44, HealthCare = 1.39, Entertainment = 1.46, Education = 1.17},
+                new IncomeMultiplier() { IncomeMultiplierId = 8, IncomeRangeId = 8, Groceries =  1.44, RestaurantsAndDining = 1.75, RentOrMortgage = 1.85, Utilities = 1.39, Telephone = 1.53, Household = 1.94, HouseholdEquipment = 2.06, Clothing = 1.87, Vehicles = 1.78, Gasoline = 1.51, HealthCare = 1.51, Entertainment = 2.23, Education = 2.99},
+                new IncomeMultiplier() { IncomeMultiplierId = 9, IncomeRangeId = 9, Groceries =  1.75, RestaurantsAndDining = 2.58, RentOrMortgage = 2.49, Utilities = 1.63, Telephone = 1.67, Household = 3.57, HouseholdEquipment = 2.46, Clothing = 2.61, Vehicles = 2.57, Gasoline = 1.6, HealthCare = 1.97, Entertainment = 2.97, Education = 5.91}
 
            );
+            //spending data is for an entire year. dividing each figure by 12 to make them monthly
+            // woot! magic numbers!
+            _context.StandardSpendings.AddOrUpdate(s => s.StandardSpendingId,
+                new StandardSpending() { StandardSpendingId = 1, CalendarYear = 2017, Groceries = 4363/12, RestaurantsAndDining = 3365/12, RentOrMortgage = 11895/12, Utilities = 2481/12, Telephone = 1356/12, Household = 1212/12, HouseholdEquipment = 1987/12, Clothing = 1833/12, Vehicles = 5021/12, Gasoline = 1968/12, HealthCare = 4928/12, Entertainment = 3203/12, Education = 1491/12}
 
+                );
             _context.SaveChanges();
         }
     }
