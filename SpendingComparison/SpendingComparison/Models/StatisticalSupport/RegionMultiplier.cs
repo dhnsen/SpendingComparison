@@ -19,42 +19,42 @@ namespace SpendingComparison.Models.StatisticalSupport
 
 
         [Required]
-        public double Groceries { get; set; }
+        public decimal Groceries { get; set; }
 
         [Required]
-        public double RestaurantsAndDining { get; set; }
+        public decimal RestaurantsAndDining { get; set; }
 
         [Required]
-        public double RentOrMortgage { get; set; }
+        public decimal RentOrMortgage { get; set; }
 
         [Required]
-        public double Utilities { get; set; }
+        public decimal Utilities { get; set; }
 
         [Required]
-        public double Telephone { get; set; }
+        public decimal Telephone { get; set; }
 
         [Required]
-        public double Household { get; set; }
+        public decimal Household { get; set; }
 
         [Required]
-        public double HouseholdEquipment { get; set; }
+        public decimal HouseholdEquipment { get; set; }
 
         [Required]
-        public double Clothing { get; set; }
+        public decimal Clothing { get; set; }
 
         [Required]
-        public double Vehicles { get; set; }
+        public decimal Vehicles { get; set; }
 
         [Required]
-        public double Gasoline { get; set; }
+        public decimal Gasoline { get; set; }
 
         [Required]
-        public double HealthCare { get; set; }
+        public decimal HealthCare { get; set; }
 
         [Required]
-        public double Entertainment { get; set; }
+        public decimal Entertainment { get; set; }
 
         [Required]
-        public double Education { get; set; }
+        public decimal Education { get; set; }
     }
 }

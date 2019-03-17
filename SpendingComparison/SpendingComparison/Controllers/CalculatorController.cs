@@ -19,23 +19,21 @@ namespace SpendingComparison.Controllers
         //GET: Calculator
         public ActionResult Index()
         {
-            ViewBag.IncomeRangeId = new SelectList(db.IncomeRanges, "IncomeRangeID", "ToString");
-            ViewBag.RegionId = new SelectList(db.Regions, "RegionID", "ToString");
+            ViewBag.IncomeRangeId = new SelectList(db.IncomeRanges, "IncomeRangeId", "ToString");
+            ViewBag.RegionId = new SelectList(db.Regions, "RegionId", "ToString");
             return View();
         }
 
         // POST: Calculator
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index([Bind(Include = "IncomeRangeID, RegionID,RestaurantsAndDining,Groceries,RentOrMortgage,ElectricAndGas")] CalculatorViewModel calculatorViewModel)
+        public ActionResult Index([Bind(Include = "IncomeRangeId,RegionId,RestaurantsAndDining," +
+            "Groceries,RentOrMortgage,Utilities,Telephone,Household,HouseholdEquipment,Clothing," +
+            "Vehicles,Gasoline,HealthCare,Entertainment,Education")] CalculatorViewModel calculatorViewModel)
         {
-            if (ModelState.IsValid)
-            {
-                Session["calculatorViewModel"] = calculatorViewModel;
-                return RedirectToAction("CalculatorResult");
-            }
-
-            return View(calculatorViewModel);
+            
+            Session["calculatorViewModel"] = calculatorViewModel;
+            return RedirectToAction("CalculatorResult");
         }
 
         // GET
@@ -99,15 +97,6 @@ namespace SpendingComparison.Controllers
                 calculatorResultViewModel.ComparisonEducation = standardSpending.Education * regionMultiplier.Education * incomeMultiplier.Education;
 
                 // initialize the result variables in the view model
-                if (calculatorViewModel.ElectricAndGas < calculatorResultViewModel.ComparisonElectricAndGas)
-                {
-                    calculatorResultViewModel.ElectricAndGasGood = true;
-                }
-                else
-                {
-                    calculatorResultViewModel.ElectricAndGasGood = false;
-                }
-
                 if (calculatorViewModel.Groceries < calculatorResultViewModel.ComparisonGroceries)
                 {
                     calculatorResultViewModel.GroceriesGood = true;
@@ -115,6 +104,15 @@ namespace SpendingComparison.Controllers
                 else
                 {
                     calculatorResultViewModel.GroceriesGood = false;
+                }
+                
+                if (calculatorViewModel.RestaurantsAndDining < calculatorResultViewModel.ComparisonRestaurantsAndDining)
+                {
+                    calculatorResultViewModel.RestaurantsAndDiningGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.RestaurantsAndDiningGood = false;
                 }
 
                 if (calculatorViewModel.RentOrMortgage < calculatorResultViewModel.ComparisonRentOrMortgage)
@@ -126,13 +124,94 @@ namespace SpendingComparison.Controllers
                     calculatorResultViewModel.RentOrMortgageGood = false;
                 }
 
-                if (calculatorViewModel.RestaurantsAndDining < calculatorResultViewModel.ComparisonRestaurantsAndDining)
+                if (calculatorViewModel.Utilities < calculatorResultViewModel.ComparisonUtilities)
                 {
-                    calculatorResultViewModel.RestaurantsAndDiningGood = true;
+                    calculatorResultViewModel.UtilitiesGood = true;
                 }
                 else
                 {
-                    calculatorResultViewModel.RestaurantsAndDiningGood = false;
+                    calculatorResultViewModel.UtilitiesGood = false;
+                }
+
+                if (calculatorViewModel.Telephone < calculatorResultViewModel.ComparisonTelephone)
+                {
+                    calculatorResultViewModel.TelephoneGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.TelephoneGood = false;
+                }
+
+                if (calculatorViewModel.Household < calculatorResultViewModel.ComparisonHousehold)
+                {
+                    calculatorResultViewModel.HouseholdGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.HouseholdGood = false;
+                }
+
+                if (calculatorViewModel.HouseholdEquipment < calculatorResultViewModel.ComparisonHouseholdEquipment)
+                {
+                    calculatorResultViewModel.HouseholdEquipmentGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.HouseholdEquipmentGood = false;
+                }
+
+                if (calculatorViewModel.Clothing < calculatorResultViewModel.ComparisonClothing)
+                {
+                    calculatorResultViewModel.ClothingGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.ClothingGood = false;
+                }
+
+                if (calculatorViewModel.Vehicles < calculatorResultViewModel.ComparisonVehicles)
+                {
+                    calculatorResultViewModel.VehiclesGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.VehiclesGood = false;
+                }
+
+                if (calculatorViewModel.Gasoline < calculatorResultViewModel.ComparisonGasoline)
+                {
+                    calculatorResultViewModel.GasolineGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.GasolineGood = false;
+                }
+
+                if (calculatorViewModel.HealthCare < calculatorResultViewModel.ComparisonHealthCare)
+                {
+                    calculatorResultViewModel.HealthCareGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.HealthCareGood = false;
+                }
+
+                if (calculatorViewModel.Entertainment < calculatorResultViewModel.ComparisonEntertainment)
+                {
+                    calculatorResultViewModel.EntertainmentGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.EntertainmentGood = false;
+                }
+
+                if (calculatorViewModel.Education < calculatorResultViewModel.ComparisonEducation)
+                {
+                    calculatorResultViewModel.EducationGood = true;
+                }
+                else
+                {
+                    calculatorResultViewModel.EducationGood = false;
                 }
 
                 // return the view with the view model

@@ -184,6 +184,10 @@
     <Compile Include="Migrations\201903170142194_SeedOnly.Designer.cs">
       <DependentUpon>201903170142194_SeedOnly.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903172103303_DoublesToDecimals.cs" />
+    <Compile Include="Migrations\201903172103303_DoublesToDecimals.Designer.cs">
+      <DependentUpon>201903172103303_DoublesToDecimals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -232,8 +236,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -255,11 +257,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Calculator\Create.cshtml" />
-    <Content Include="Views\Calculator\Delete.cshtml" />
-    <Content Include="Views\Calculator\Details.cshtml" />
-    <Content Include="Views\Calculator\Edit.cshtml" />
     <Content Include="Views\Calculator\Index.cshtml" />
+    <Content Include="Views\Calculator\CalculatorResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +279,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903170142194_SeedOnly.resx">
       <DependentUpon>201903170142194_SeedOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903172103303_DoublesToDecimals.resx">
+      <DependentUpon>201903172103303_DoublesToDecimals.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

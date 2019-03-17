@@ -109,3 +109,4 @@ C:\Users\Admin\Documents\GitHub\SpendingComparison\SpendingComparison\SpendingCo
 C:\Users\Admin\Documents\GitHub\SpendingComparison\SpendingComparison\SpendingComparison\obj\Debug\SpendingComparison.pdb
 C:\Users\Admin\Documents\GitHub\SpendingComparison\SpendingComparison\SpendingComparison\obj\Debug\SpendingComparison.Migrations.SeedOnly.resources
 C:\Users\Admin\Documents\GitHub\SpendingComparison\SpendingComparison\SpendingComparison\obj\Debug\SpendingComparison.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\SpendingComparison\SpendingComparison\SpendingComparison\obj\Debug\SpendingComparison.Migrations.DoublesToDecimals.resources

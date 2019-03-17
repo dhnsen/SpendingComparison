@@ -22,42 +22,42 @@ namespace SpendingComparison.Models.ViewModels
 
 
         [Display(Name = "Groceries")]
-        public double Groceries { get; set; }
+        public decimal Groceries { get; set; }
         
         [Display(Name = "Restaurants and Dining")]
-        public double RestaurantsAndDining { get; set; }
+        public decimal RestaurantsAndDining { get; set; }
         
         [Display(Name = "Rent or Mortgage")]
-        public double RentOrMortgage { get; set; }
+        public decimal RentOrMortgage { get; set; }
         
         [Display(Name = "Utilities (e.g. electric, water)")]
-        public double Utilities { get; set; }
+        public decimal Utilities { get; set; }
 
         [Display(Name = "Phone Service")]
-        public double Telephone { get; set; }
+        public decimal Telephone { get; set; }
 
         [Display(Name = "Household Supplies (e.g. toilet paper, dish soap)")]
-        public double Household { get; set; }
+        public decimal Household { get; set; }
 
         [Display(Name = "Furniture and Appliances")]
-        public double HouseholdEquipment { get; set; }
+        public decimal HouseholdEquipment { get; set; }
 
         [Display(Name = "Clothing")]
-        public double Clothing { get; set; }
+        public decimal Clothing { get; set; }
 
         [Display(Name = "Vehicles (e.g. loan payments, insurance)")]
-        public double Vehicles { get; set; }
+        public decimal Vehicles { get; set; }
 
         [Display(Name = "Gasoline (or other fuel)")]
-        public double Gasoline { get; set; }
+        public decimal Gasoline { get; set; }
 
         [Display(Name = "Health Care (insurance, prescriptions and copays")]
-        public double HealthCare { get; set; }
+        public decimal HealthCare { get; set; }
 
         [Display(Name = "Entertainment (e.g. video games, concert tickets")]
-        public double Entertainment { get; set; }
+        public decimal Entertainment { get; set; }
 
         [Display(Name = "Education (e.g. student loans)")]
-        public double Education { get; set; }
+        public decimal Education { get; set; }
     }
 }
