@@ -11,25 +11,50 @@ namespace SpendingComparison.Models.StatisticalSupport
     {
         [Key]
         public int RegionMultiplierId { get; set; }
+
         [Required]
-        [Display(Name = "Region")]
-        [ForeignKey("Region")]
         public int RegionId { get; set; }
-        [Display(Name = "Region")]
+        
         public virtual Region Region { get; set; }
 
 
         [Required]
-        [Display(Name = "Restaurants and Dining")]
-        public decimal RestaurantsAndDining { get; set; }
+        public double Groceries { get; set; }
+
         [Required]
-        [Display(Name = "Groceries")]
-        public decimal Groceries { get; set; }
+        public double RestaurantsAndDining { get; set; }
+
         [Required]
-        [Display(Name = "Rent or Mortgage")]
-        public decimal RentOrMortgage { get; set; }
+        public double RentOrMortgage { get; set; }
+
         [Required]
-        [Display(Name = "Electric and Gas (heating)")]
-        public decimal ElectricAndGas { get; set; }
+        public double Utilities { get; set; }
+
+        [Required]
+        public double Telephone { get; set; }
+
+        [Required]
+        public double Household { get; set; }
+
+        [Required]
+        public double HouseholdEquipment { get; set; }
+
+        [Required]
+        public double Clothing { get; set; }
+
+        [Required]
+        public double Vehicles { get; set; }
+
+        [Required]
+        public double Gasoline { get; set; }
+
+        [Required]
+        public double HealthCare { get; set; }
+
+        [Required]
+        public double Entertainment { get; set; }
+
+        [Required]
+        public double Education { get; set; }
     }
 }

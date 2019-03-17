@@ -183,6 +183,14 @@
     <Compile Include="Migrations\201903162215520_InitialMigration.Designer.cs">
       <DependentUpon>201903162215520_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903170049528_AddFieldsToModels.cs" />
+    <Compile Include="Migrations\201903170049528_AddFieldsToModels.Designer.cs">
+      <DependentUpon>201903170049528_AddFieldsToModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903170100463_DecimalsToDoubles.cs" />
+    <Compile Include="Migrations\201903170100463_DecimalsToDoubles.Designer.cs">
+      <DependentUpon>201903170100463_DecimalsToDoubles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -274,6 +282,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903162215520_InitialMigration.resx">
       <DependentUpon>201903162215520_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903170049528_AddFieldsToModels.resx">
+      <DependentUpon>201903170049528_AddFieldsToModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903170100463_DecimalsToDoubles.resx">
+      <DependentUpon>201903170100463_DecimalsToDoubles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
