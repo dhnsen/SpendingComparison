@@ -9,7 +9,7 @@ namespace SpendingComparison.Models.StatisticalSupport
     public class IncomeMultiplier
     {
         [Key]
-        public int MultiplierIncomeId { get; set; }
+        public int IncomeMultiplierId { get; set; }
 
         [Required]
         public int IncomeRangeId { get; set; }
