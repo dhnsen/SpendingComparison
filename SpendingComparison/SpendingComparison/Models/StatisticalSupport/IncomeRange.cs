@@ -14,6 +14,7 @@ namespace SpendingComparison.Models.StatisticalSupport
         [Display(Name = "Top Income Range")]
         public decimal TopIncomeRange { get; set; }
 
+        
         public string ToString => this.BottomIncomeRange + " - " + this.TopIncomeRange;
 
     }

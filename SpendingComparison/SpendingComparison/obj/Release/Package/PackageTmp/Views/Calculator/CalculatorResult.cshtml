@@ -1,0 +1,228 @@
+﻿@model SpendingComparison.Models.ViewModels.CalculatorResultViewModel
+
+@{
+    ViewBag.Title = "Your Results";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+
+<table class="table">
+
+    <tr>
+        <th>
+            <h4>Category</h4>
+        </th>
+        <th>
+            <h4>You</h4>
+        </th>
+        <th>
+            <h4>Similar People</h4>
+        </th>
+        <th>
+            <h4>Comparison</h4>
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Groceries)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Groceries)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonGroceries)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.GroceriesStatus)
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RestaurantsAndDining)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.RestaurantsAndDining)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonRestaurantsAndDining)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.RestaurantsAndDiningStatus)
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RentOrMortgage)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.RentOrMortgage)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonRentOrMortgage)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.RentOrMortgageStatus)
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Utilities)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Utilities)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonUtilities)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.UtilitiesStatus)
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonTelephone)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.TelephoneStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Household)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Household)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonHousehold)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.HouseholdStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseholdEquipment)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.HouseholdEquipment)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonHouseholdEquipment)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.HouseholdEquipmentStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Clothing)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Clothing)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonClothing)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ClothingStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicles)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Vehicles)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonVehicles)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.VehiclesStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gasoline)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Gasoline)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonGasoline)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.GasolineStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HealthCare)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.HealthCare)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonHealthCare)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.HealthCareStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Entertainment)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Entertainment)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonEntertainment)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.EntertainmentStatus)
+        </th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Education)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.Education)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.ComparisonEducation)
+        </th>
+        <th>
+            @Html.DisplayFor(model => model.EducationStatus)
+        </th>
+    </tr>
+
+</table>
+<p>*Note: If you did not fill out a field, it was calculated as zero.</p>
+<br />
+<h2>What Does This Mean?</h2>
+<p>These are averages of people in the same income range and region as you.
+    Your situation is unique so you may need to spend more in some categories 
+    than the average person. Some of these categories may not even apply to you
+    or you may classify your spending differently.
+    </P>
+<p>
+    You should also keep in mind that the average person in lower income ranges does not have much money in savings. 
+    A healthy savings account gives you more opportunities and protects you from risk. The most importnt thing is that you spend less
+    money than you make and try to build up you savings.
+</p>
