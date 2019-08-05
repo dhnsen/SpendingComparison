@@ -82,6 +82,8 @@ namespace SpendingComparison.Controllers
                 StandardSpending standardSpending = db.StandardSpendings.Where(s => s.CalendarYear == mostRecentYear).FirstOrDefault();
 
                 // initialize the comparison variables in the view model using the multipliers
+                // I felt like this should be a method in a model (information expert)
+                // 
                 calculatorResultViewModel.ComparisonGroceries = standardSpending.Groceries * regionMultiplier.Groceries * incomeMultiplier.Groceries;
                 calculatorResultViewModel.ComparisonRestaurantsAndDining = standardSpending.RestaurantsAndDining * regionMultiplier.RestaurantsAndDining * incomeMultiplier.RestaurantsAndDining;
                 calculatorResultViewModel.ComparisonRentOrMortgage = standardSpending.RentOrMortgage * regionMultiplier.RentOrMortgage * incomeMultiplier.RentOrMortgage;
